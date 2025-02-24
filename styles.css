@@ -269,3 +269,37 @@ header {
   font-size: 1.2em;
   margin-top: 20px;
 }
+
+/* footer css :  */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+.footer-logo {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-icons ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.contact-icons li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.contact-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  background: none;
+}
