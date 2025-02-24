@@ -1,0 +1,271 @@
+:root {
+  --primary-color: #ebecd2;
+  --secondary-color: #2ecc71;
+  font-weight: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-weight: normal;
+}
+/* Header */
+header {
+  background-color: #161516;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav-container ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-container ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "logo aboutme"
+    "education skills"
+    "experience1 experience2"
+    "project certifications";
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Grid code */
+.container section {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Logo and name section */
+.logo {
+  grid-area: logo;
+  background: #9bd3d1;
+}
+.profile-photo {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+.name {
+  font-weight: bold;
+}
+
+/* About me section */
+.aboutme {
+  grid-area: aboutme;
+  background: #9bd3d1;
+}
+
+.about-me ul {
+  text-align: left;
+  padding: 0;
+  font-style: italic;
+}
+
+/* Education Section */
+.education {
+  grid-area: education;
+  background: #9bd3d1;
+}
+
+.edu ul {
+  text-align: left;
+  padding: 0;
+  font-style: italic;
+}
+
+/* skills Section */
+.skills {
+  grid-area: skills;
+  background: #9bd3d1;
+}
+
+.sec-skills ul {
+  text-align: left;
+  padding: 0;
+  font-style: italic;
+}
+
+/* --- */
+/* Experience Section */
+.experience {
+  background-color: #2ad138;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company {
+  gap: 15px;
+  align-items: start;
+  padding: 15px;
+  background-color: #d0e6d4;
+  border-radius: 8px;
+}
+
+.company-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4caf50;
+}
+
+.company h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.company p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  height: 5rem;
+}
+
+/* Project section */
+.project {
+  grid-area: project;
+  background-color: #eae9ca;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.project-1,
+.project-2,
+.project-3 {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.project-1:hover,
+.project-2:hover,
+.project-3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.company-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4caf50;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- */
+/* certification section */
+/* Certifications Section Styling */
+.certifications {
+  grid-area: certifications; /* Assign to the "certifications" grid area */
+  background-color: #f0c8ed; /* Light background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-certifications {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between certifications */
+  text-align: center; /* Center the heading and content */
+}
+
+.box-certifications h2 {
+  grid-column: 1 / -1; /* Make the heading span all columns */
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.certification-1,
+.certification-2 {
+  background-color: #ffffff; /* White background for each certification */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-1:hover,
+.certification-2:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.certifications-photo {
+  width: 60px; /* Adjust image size */
+  height: 60px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure the image fits well */
+  border: 2px solid #4caf50; /* Green border */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+.box-certifications p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
