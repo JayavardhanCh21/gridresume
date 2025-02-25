@@ -53,7 +53,6 @@ header {
   padding: 20px;
 }
 
-/* Grid code */
 .container section {
   padding: 20px;
   border-radius: 8px;
@@ -90,7 +89,7 @@ header {
 /* Education Section */
 .education {
   grid-area: education;
-  background: #9bd3d1;
+  background: #e4c2c6;
 }
 
 .edu ul {
@@ -102,7 +101,7 @@ header {
 /* skills Section */
 .skills {
   grid-area: skills;
-  background: #9bd3d1;
+  background: #e4c2c6;
 }
 
 .sec-skills ul {
@@ -111,13 +110,22 @@ header {
   font-style: italic;
 }
 
-/* --- */
 /* Experience Section */
 .experience {
-  background-color: #2ad138;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience1,
+.experience2 {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .company {
@@ -204,12 +212,11 @@ header {
   margin: 0;
 }
 
-/* --- */
 /* certification section */
-/* Certifications Section Styling */
+
 .certifications {
-  grid-area: certifications; /* Assign to the "certifications" grid area */
-  background-color: #f0c8ed; /* Light background */
+  grid-area: certifications;
+  background-color: #eae9ca;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -217,21 +224,21 @@ header {
 
 .box-certifications {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 20px; /* Space between certifications */
-  text-align: center; /* Center the heading and content */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
 }
 
 .box-certifications h2 {
-  grid-column: 1 / -1; /* Make the heading span all columns */
+  grid-column: 1 / -1;
   font-size: 2rem;
   color: #333;
-  margin-bottom: 20px; /* Space below the heading */
+  margin-bottom: 20px;
 }
 
 .certification-1,
 .certification-2 {
-  background-color: #ffffff; /* White background for each certification */
+  background-color: #ffffff;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -240,17 +247,17 @@ header {
 
 .certification-1:hover,
 .certification-2:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+  transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .certifications-photo {
-  width: 60px; /* Adjust image size */
+  width: 60px;
   height: 60px;
-  border-radius: 50%; /* Circular image */
-  object-fit: cover; /* Ensure the image fits well */
-  border: 2px solid #4caf50; /* Green border */
-  margin-bottom: 10px; /* Space below the image */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4caf50;
+  margin-bottom: 10px;
 }
 
 .box-certifications p {
@@ -269,8 +276,6 @@ header {
   font-size: 1.2em;
   margin-top: 20px;
 }
-
-/* footer css :  */
 
 footer {
   text-align: center;
@@ -301,5 +306,51 @@ footer {
   width: 50px;
   height: 50px;
   object-fit: cover;
-  background: none;
+  background: transparent;
+}
+
+/* Media Query */
+@media (max-width: 500px) {
+  .nav-container ul {
+    display: none;
+  }
+
+  .nav-container::before {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "logo"
+      "skills"
+      "experience1"
+      "experience2";
+  }
+
+  .aboutme,
+  .education,
+  .certifications,
+  .project {
+    display: none;
+  }
+
+  .logo {
+    grid-area: logo;
+    background: #9bd3d1;
+  }
+
+  .skills {
+    grid-area: skills;
+    background: #9bd3d1;
+  }
+
+  .experience1 {
+    grid-area: experience1;
+  }
+  .experience2 {
+    grid-area: experience2;
+  }
 }
